@@ -18,6 +18,7 @@
   "homepage": "https://github.com/j-christoffersen/clinvitae-clone#readme",
   "dependencies": {
     "csv": "^3.0.0",
+    "dotenv": "^5.0.1",
     "knex": "^0.14.4",
     "pg": "^7.4.1"
   },
