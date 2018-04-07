@@ -7,7 +7,7 @@
     "server-dev": "nodemon server",
     "db:load": "node ./database/utils/load.js",
     "db:migrate": "node_modules/.bin/knex migrate:latest",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --exit"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,8 @@
   "homepage": "https://github.com/j-christoffersen/clinvitae-clone#readme",
   "dependencies": {
     "bookshelf": "^0.13.3",
+    "chai": "^4.1.2",
+    "chai-http": "^4.0.0",
     "csv": "^3.0.0",
     "csv-parse": "^2.2.0",
     "dotenv": "^5.0.1",

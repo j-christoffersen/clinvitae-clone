@@ -7,8 +7,8 @@ module.exports = {
         .fetch({
           withRelated: 'variants',
         })
-        .then((variants) => {
-          res.send(variants);
+        .then((data) => {
+          res.send(data.relations.variants);
         });
     } else {
       res.status(400).send(JSON.stringify('query must include geneName'));

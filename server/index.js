@@ -24,3 +24,5 @@ app.route('/api/variants')
   .get(variants.get);
 
 app.listen(process.env.PORT || 80);
+
+module.exports = app;
