@@ -9,4 +9,4 @@ const Variant = bookshelf.Model.extend({
   },
 });
 
-module.exports = Variant;
+module.exports = bookshelf.model('Variant', Variant);

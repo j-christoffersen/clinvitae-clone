@@ -9,4 +9,4 @@ const Gene = bookshelf.Model.extend({
   },
 });
 
-module.exports = Gene;
+module.exports = bookshelf.model('Gene', Gene);
