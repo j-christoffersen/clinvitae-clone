@@ -9,7 +9,6 @@ exports.up = knex => (
     })
     .createTable('variants', (table) => {
       table.increments('id').primary();
-      table.string('name');
       table.specificType('nucleotideChanges', 'text[]');
       table.string('proteinChange');
       table.string('alias');
