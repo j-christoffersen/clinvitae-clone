@@ -4,6 +4,8 @@ exports.up = knex => (
     .createTable('genes', (table) => {
       table.increments('id').primary();
       table.string('name');
+      table.unique('name');
+      table.index('name');
     })
     .createTable('variants', (table) => {
       table.increments('id').primary();
