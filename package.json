@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "db:load": "node ./database/utils/load.js",
     "db:migrate": "node_modules/.bin/knex migrate:latest",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,9 +20,11 @@
   "homepage": "https://github.com/j-christoffersen/clinvitae-clone#readme",
   "dependencies": {
     "csv": "^3.0.0",
+    "csv-parse": "^2.2.0",
     "dotenv": "^5.0.1",
     "knex": "^0.14.4",
-    "pg": "^7.4.1"
+    "pg": "^7.4.1",
+    "split": "^1.0.1"
   },
   "devDependencies": {
     "eslint": "^4.19.1",

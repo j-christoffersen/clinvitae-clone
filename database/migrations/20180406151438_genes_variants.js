@@ -7,8 +7,16 @@ exports.up = knex => (
     })
     .createTable('variants', (table) => {
       table.increments('id').primary();
-      table.text('name');
+      table.string('name');
       table.specificType('nucleotideChanges', 'text[]');
+      table.string('proteinChange');
+      table.string('alias');
+      table.string('region');
+      table.string('reportedClassification');
+      table.date('lastUpdated');
+      table.date('lastEvaluated');
+      table.string('source');
+      table.string('url');
       table.integer('geneId').references('genes.id').onDelete('CASCADE');
     })
 );
