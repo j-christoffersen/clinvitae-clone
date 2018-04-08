@@ -19,11 +19,11 @@ describe('/api/variants', () => {
 
     it('should respond with all the variants of a gene', (done) => {
       chai.request(server)
-        .get('/api/variants?geneName=CYFIP1')
+        .get('/api/variants?geneName=ABC1')
         .end((err, res) => {
           res.should.have.status(200);
           res.body.should.be.a('array');
-          res.body.length.should.be.eql(1);
+          res.body.length.should.be.eql(2);
           done();
         });
     });
