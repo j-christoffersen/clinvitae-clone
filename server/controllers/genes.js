@@ -5,17 +5,30 @@ const trie = new TrieSearch('name', { min: 2 });
 
 let trieLoaded = false;
 
+const BATCH_SIZE = 100;
+
+
+const insert = async (currentId) => {
+  const records = await knex('genes')
+    .where('id', '>=', currentId)
+    .andWhere('id', '<', currentId + BATCH_SIZE);
+  trie.addAll(records);
+};
+
 const loadTrie = async () => {
-  const BATCH_SIZE = 100;
-  const totalRecords = parseInt((await knex('genes').count('*'))[0].count, 10);
-  let recordsInserted = 0;
-  while (recordsInserted < totalRecords) {
-    const records = await knex('genes')
-      .where('id', '>=', recordsInserted)
-      .andWhere('id', '<', recordsInserted + BATCH_SIZE);
-    trie.addAll(records);
-    recordsInserted += records.length;
+  const maxId = parseInt(
+    (await knex('genes').max('id'))[0].max,
+    10,
+  );
+  let currentId = 0;
+  const insertions = [];
+
+  while (currentId < maxId) {
+    insertions.push(insert(currentId));
+    currentId += BATCH_SIZE;
   }
+
+  await Promise.all(insertions);
   trieLoaded = true;
 };
 
