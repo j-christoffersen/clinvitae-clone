@@ -2,7 +2,7 @@ require('dotenv').config();
 
 const express = require('express');
 
-const { variants } = require('./controllers');
+const { variants, genes } = require('./controllers');
 
 const JsonHeaders = {
   'Content-Type': 'application/json',
@@ -22,6 +22,9 @@ app.use((req, res, next) => {
 
 app.route('/api/variants')
   .get(variants.get);
+
+app.route('/api/search')
+  .get(genes.get);
 
 app.listen(process.env.PORT || 80);
 

@@ -34,7 +34,7 @@ describe('/api/search', () => {
   describe('GET /api/search', () => {
     it('should respond with an empty array when there is no query', (done) => {
       chai.request(server)
-        .get('./api/search')
+        .get('/api/search')
         .end((err, res) => {
           res.should.have.status(200);
           res.body.should.be.a('array');
@@ -45,7 +45,7 @@ describe('/api/search', () => {
 
     it('should respond with an empty array when the query is less than two characters', (done) => {
       chai.request(server)
-        .get('./api/search?query=a')
+        .get('/api/search?geneName=a')
         .end((err, res) => {
           res.should.have.status(200);
           res.body.should.be.a('array');
@@ -56,7 +56,7 @@ describe('/api/search', () => {
 
     it('should respond with an array of genes when the query is two characters or longer', (done) => {
       chai.request(server)
-        .get('./api/search?query=ab')
+        .get('/api/search?geneName=ab')
         .end((err, res) => {
           res.should.have.status(200);
           res.body.should.be.a('array');

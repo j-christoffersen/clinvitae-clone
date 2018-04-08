@@ -14,6 +14,7 @@ module.exports = {
     },
     debug: false,
   },
+
   test: {
     client: 'pg',
     connection: {
