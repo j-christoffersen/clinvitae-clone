@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "server-dev": "nodemon server",
+    "build-dev": "webpack -w",
     "db:load": "node ./database/utils/load.js",
     "db:migrate": "node_modules/.bin/knex migrate:latest",
+    "server-dev": "nodemon server",
     "test": "mocha --exit"
   },
   "repository": {
@@ -26,6 +27,8 @@
     "csv": "^3.0.0",
     "csv-parse": "^2.2.0",
     "dotenv": "^5.0.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "express": "^4.16.3",
     "knex": "^0.14.4",
     "pg": "^7.4.1",
@@ -46,6 +49,7 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.7.0",
     "nodemon": "^1.17.3",
+    "webpack": "^4.5.0",
     "webpack-cli": "^2.0.14"
   }
 }
