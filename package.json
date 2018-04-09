@@ -29,15 +29,23 @@
     "express": "^4.16.3",
     "knex": "^0.14.4",
     "pg": "^7.4.1",
+    "prop-types": "^15.6.1",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
     "split": "^1.0.1",
     "trie-search": "^1.0.9"
   },
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.10.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.7.0",
-    "nodemon": "^1.17.3"
+    "nodemon": "^1.17.3",
+    "webpack-cli": "^2.0.14"
   }
 }
