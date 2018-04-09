@@ -4,7 +4,11 @@ import PropTypes from 'prop-types';
 const Row = props => (
   <tr>
     <td>{props.variant.gene}</td>
-    <td>{/*props.variant.nucleotideChanges*/ 'TODO'}</td>
+    <td>
+      {props.variant.nucleotideChanges.map(nucleotideChange => (
+        <div key={nucleotideChange}>{nucleotideChange}</div>
+      ))}
+    </td>
     <td>{props.variant.proteinChange}</td>
     <td>{props.variant.alias}</td>
     <td>{props.variant.region}</td>

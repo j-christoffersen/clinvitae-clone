@@ -7,7 +7,7 @@ const Table = props => (
     <thead>
       <tr>
         <th>Gene</th>
-        <th>Nucleotide Change</th>
+        <th>Nucleotide Changes</th>
         <th>Protein Change</th>
         <th>Alias</th>
         <th>Region</th>
