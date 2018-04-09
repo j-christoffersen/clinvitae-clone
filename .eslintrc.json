@@ -1,11 +1,10 @@
 {
-    "extends": "airbnb",
-    "env": {
-      "browser": true,
-      "mocha": true
-    },
-    "rules": {
-      "no-plusplus": 0,
-      "react/no-array-index-key": 1
-    }
+  "extends": "airbnb",
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "no-plusplus": 0,
+    "react/no-array-index-key": 1
+  }
 }

@@ -3,8 +3,21 @@ const chaiHttp = require('chai-http');
 const server = require('../server');
 
 chai.should();
-
 chai.use(chaiHttp);
+
+describe('/', () => {
+  describe('GET /', () => {
+    it('should respond with an html file', (done) => {
+      chai.request(server)
+        .get('/')
+        .end((err, res) => {
+          res.should.have.status(200);
+          res.should.be.html;
+          done();
+        });
+    });
+  });
+});
 
 describe('/api/variants', () => {
   describe('GET /api/variants', () => {
