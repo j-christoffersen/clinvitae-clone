@@ -8,7 +8,9 @@
     "db:load": "node ./database/utils/load.js",
     "db:migrate": "node_modules/.bin/knex migrate:latest",
     "server-dev": "nodemon server",
-    "test": "mocha --exit"
+    "test": "npm run test-server && npm run test-client",
+    "test-server": "mocha test/server/* --exit",
+    "test-client": "mocha test/client/* --compilers js:babel-register"
   },
   "repository": {
     "type": "git",
