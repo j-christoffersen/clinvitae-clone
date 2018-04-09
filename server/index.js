@@ -1,4 +1,5 @@
 require('dotenv').config();
+const path = require('path');
 
 const express = require('express');
 
@@ -10,21 +11,21 @@ const JsonHeaders = {
 
 const app = express();
 
-app.route('/')
-  .get((req, res) => {
-    res.send('CLINVITAE');
-  });
+const api = express.Router();
 
-app.use((req, res, next) => {
+api.use((req, res, next) => {
   res.set(JsonHeaders);
   next();
 });
 
-app.route('/api/variants')
+api.route('/variants')
   .get(variants.get);
 
-app.route('/api/search')
+api.route('/search')
   .get(genes.get);
+
+app.use('/api', api);
+app.use(express.static(path.join(__dirname, '/../client/dist')));
 
 app.listen(process.env.PORT || 80);
 
