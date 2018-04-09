@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Table from './Table';
+import Search from './Search';
 import dummyData from './dummyData';
 
 class App extends Component {
@@ -14,7 +15,10 @@ class App extends Component {
 
   render() {
     return (
-      <Table variants={this.state.variants} />
+      <div>
+        <Table variants={this.state.variants} />
+        <Search onClick={() => {}} />
+      </div>
     );
   }
 }
