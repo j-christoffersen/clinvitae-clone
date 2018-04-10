@@ -12,7 +12,7 @@ module.exports = {
             .map(variant => Object.assign(
               {},
               variant,
-              { gene: req.query.geneName },
+              { gene: req.query.geneName }
             )));
         });
     } else {

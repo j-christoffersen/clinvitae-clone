@@ -18,7 +18,7 @@ const insert = async (currentId) => {
 const loadTrie = async () => {
   const maxId = parseInt(
     (await knex('genes').max('id'))[0].max,
-    10,
+    10
   );
   let currentId = 0;
   const insertions = [];

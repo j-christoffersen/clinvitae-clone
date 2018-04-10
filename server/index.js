@@ -27,6 +27,10 @@ api.route('/search')
 app.use('/api', api);
 app.use(express.static(path.join(__dirname, '/../client/dist')));
 
-app.listen(process.env.PORT || 80);
+const port = process.env.PORT || 80;
+
+app.listen(port, () => {
+  console.log(`Listening on PORT ${port}`)
+});
 
 module.exports = app;
