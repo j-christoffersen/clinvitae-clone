@@ -5,9 +5,9 @@ module.exports = {
     client: 'pg',
     connection: {
       host: '127.0.0.1',
-      user: process.env.PG_USER,
-      password: process.env.PG_PASSWORD,
-      database: 'clinvitae',
+      user: process.env.DB_USER,
+      password: process.env.DB_PASSWORD,
+      database: process.env.DB_NAME_DEVELOPMENT || 'clinvitae',
     },
     migrations: {
       directory: './database/migrations',
@@ -19,9 +19,9 @@ module.exports = {
     client: 'pg',
     connection: {
       host: '127.0.0.1',
-      user: process.env.PG_USER,
-      password: process.env.PG_PASSWORD,
-      database: 'clinvitae-test',
+      user: process.env.DB_USER,
+      password: process.env.DB_PASSWORD,
+      database: process.env.DB_NAME_TEST || 'clinvitae-test',
     },
     migrations: {
       directory: './database/migrations',
