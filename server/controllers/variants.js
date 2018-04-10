@@ -8,7 +8,12 @@ module.exports = {
           withRelated: 'variants',
         })
         .then((data) => {
-          res.send(data.relations.variants);
+          res.send(data.relations.variants.serialize()
+            .map(variant => Object.assign(
+              {},
+              variant,
+              { gene: req.query.geneName },
+            )));
         });
     } else {
       res.status(400).send(JSON.stringify('query must include geneName'));

@@ -79,7 +79,6 @@ describe('<Search />', () => {
 
     // wait for api call to respond
     setTimeout(() => {
-      console.log(wrapper.state());
       wrapper.update().find('option').should.have.length(2);
 
       mock.restore();
