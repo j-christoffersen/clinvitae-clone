@@ -19,7 +19,7 @@ const Table = props => (
     </thead>
     <tbody>
       { props.variants.map(variant => (
-        <Row variant={variant} key={variant.proteinChange} />
+        <Row variant={variant} key={variant.id} />
       ))}
     </tbody>
   </table>

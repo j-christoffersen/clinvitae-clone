@@ -10,6 +10,7 @@ module.exports = {
 
   variants: [
     {
+      id: 1,
       geneId: 1,
       nucleotideChanges: ['NC100', 'NC101'],
       proteinChange: 'p.xxyyxxzz',
@@ -22,6 +23,7 @@ module.exports = {
       url: 'www.nick.com',
     },
     {
+      id: 2,
       geneId: 1,
       nucleotideChanges: ['NC100', 'NC101'],
       proteinChange: 'p.123123123',
@@ -34,6 +36,7 @@ module.exports = {
       url: 'www.nick.com',
     },
     {
+      id: 3,
       geneId: 2,
       nucleotideChanges: ['NC100', 'NC101'],
       proteinChange: 'p.qwertyuiop',

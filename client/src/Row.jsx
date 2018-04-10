@@ -10,11 +10,11 @@ const Row = props => (
       ))}
     </td>
     <td>{props.variant.proteinChange}</td>
-    <td>{props.variant.alias}</td>
-    <td>{props.variant.region}</td>
+    <td>{props.variant.alias || '-'}</td>
+    <td>{props.variant.region || '-'}</td>
     <td>{props.variant.reportedClassification}</td>
-    <td>{props.variant.lastEvaluated}</td>
-    <td>{props.variant.lastUpdated}</td>
+    <td>{props.variant.lastEvaluated || '-'}</td>
+    <td>{props.variant.lastUpdated || '-'}</td>
     <td><a href={props.variant.url}>{props.variant.source}</a></td>
   </tr>
 );

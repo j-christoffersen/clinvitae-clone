@@ -1,5 +1,6 @@
 export default [
   {
+    id: 1,
     gene: 'ABC1',
     nucleotideChanges: ['NC100', 'NC101'],
     proteinChange: 'p.xxyyxxzz',
@@ -12,6 +13,7 @@ export default [
     url: 'https://www.nick.com',
   },
   {
+    id: 2,
     gene: 'ABC1',
     nucleotideChanges: ['NC100', 'NC101'],
     proteinChange: 'p.123123123',
@@ -24,6 +26,7 @@ export default [
     url: 'https://www.nick.com',
   },
   {
+    id: 3,
     gene: 'ABC2',
     nucleotideChanges: ['NC100', 'NC101'],
     proteinChange: 'p.qwertyuiop',

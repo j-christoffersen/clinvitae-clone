@@ -32,7 +32,7 @@ class Search extends Component {
 
   render() {
     return (
-      <div>
+      <div className="search">
         <input list="items" onChange={this.onInputUpdate} />
         <datalist id="items">
           {

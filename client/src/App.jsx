@@ -4,12 +4,14 @@ import axios from 'axios';
 import Table from './Table';
 import Search from './Search';
 
+import dummyData from './dummyData';
+
 class App extends Component {
   constructor() {
     super();
 
     this.state = {
-      variants: [],
+      variants: dummyData,
     };
 
     this.onSearch = this.onSearch.bind(this);
@@ -27,8 +29,11 @@ class App extends Component {
   render() {
     return (
       <div>
+        <div className="flex-container">
+          <img src="http://clinvitae.invitae.com/static/img/clinvitae-small.png" alt="CLINVITAE" />
+          <Search onClick={this.onSearch} />
+        </div>
         <Table variants={this.state.variants} />
-        <Search onClick={this.onSearch} />
       </div>
     );
   }

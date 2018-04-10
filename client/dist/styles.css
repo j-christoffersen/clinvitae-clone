@@ -1,0 +1,36 @@
+* {
+  font-family: Verdana, sans-serif;
+}
+
+table, th, td {
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 5px;
+  text-align: left;
+  font-weight: normal;
+}
+
+th {
+  background-color:  lightseagreen;
+  color: white;
+}
+
+tr {
+  background-color: ghostwhite;
+}
+
+tr:nth-child(2) {
+  background-color: gainsboro;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+}
+
+.search {
+  display: inline-block;
+  padding: 20px;
+}
