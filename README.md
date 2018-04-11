@@ -28,6 +28,7 @@ This project is a simple app where you can search for information on various gen
 There are a few environment variables that are required to run the app.
 
 - `PORT`: the port the server will listen on
+- `TEST_PORT`: the port the server will listen on during testing, must be different from PORT in order to run tests while the server is running.
 - `NODE_ENV`: either development or test
 - `DB_FILE_PATH`: the path to the file where the data will be loaded from. See [Database Setup](#database-setup)
 - `DB_USER`: the user who has access to the created database
