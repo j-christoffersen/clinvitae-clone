@@ -44,7 +44,7 @@ To set up the development and testing databases, create new PostgreSQL databases
 
 To run migrations on the database, run `npm run db:migrate`
 
-To load the developmnet database, download and the file containing the variant data [here](http://clinvitae.invitae.com/download). Once you've specified the path to the file, run the command `npm run db:load`.
+To load the developmnet database, download and the file containing the variant data [here](http://clinvitae.invitae.com/download). Once you've specified the path to the file, run the command `npm run db:load`. This may take a few minutes.
 
 To seed the test database, run `knex seed:run`. Be sure that `NODE_ENV` is set to `test`.
 

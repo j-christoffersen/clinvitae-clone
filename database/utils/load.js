@@ -75,13 +75,14 @@ knex('variants').del()
               .then(() => {
                 rows = [];
                 readStream.resume();
-                console.log(counter += 1000);
+                console.log(`Inserted ${counter += 1000} variants`);
               });
           }
         }
       })
       .on('end', () => {
         insertIntoDB();
-        console.log('done!');
+        console.log('Done!');
+        process.exit();
       });
   });
