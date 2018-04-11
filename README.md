@@ -15,7 +15,7 @@ This project is a simple app where you can search for information on various gen
 
 - NodeJS v9.1.2
 - NPM v5.6.0
-- Mocha `npm install -g mocha` 5.0.5
+- Mocha `npm install -g mocha` v5.0.5
 
 ## Usage
 

@@ -69,7 +69,7 @@ describe('<Search />', () => {
     const mock = new Mock(axios);
     mock.onGet('/api/search?geneName=abc').reply(
       200,
-      [{ name: 'abc1', id: 0 }, { name: 'abc2', id: 1 }],
+      [{ name: 'abc1', id: 0 }, { name: 'abc2', id: 1 }]
     );
 
     const wrapper = shallow(<Search onClick={() => {}} />);
