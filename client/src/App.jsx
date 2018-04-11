@@ -4,14 +4,14 @@ import axios from 'axios';
 import Table from './Table';
 import Search from './Search';
 
-import dummyData from './dummyData';
+// import dummyData from './dummyData';
 
 class App extends Component {
   constructor() {
     super();
 
     this.state = {
-      variants: dummyData,
+      variants: [],
     };
 
     this.onSearch = this.onSearch.bind(this);

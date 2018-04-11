@@ -1,3 +1,5 @@
+// This file is for markup purposes
+
 export default [
   {
     id: 1,
