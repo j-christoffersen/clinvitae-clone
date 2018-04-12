@@ -21,7 +21,7 @@ tr {
   background-color: ghostwhite;
 }
 
-tr:nth-child(2) {
+tr:nth-child(2n) {
   background-color: gainsboro;
 }
 

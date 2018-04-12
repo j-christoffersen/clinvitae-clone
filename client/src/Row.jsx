@@ -5,8 +5,8 @@ const Row = props => (
   <tr>
     <td>{props.variant.gene}</td>
     <td>
-      {props.variant.nucleotideChanges.map(nucleotideChange => (
-        <div key={nucleotideChange}>{nucleotideChange}</div>
+      {props.variant.nucleotideChanges.map((nucleotideChange, i) => (
+        <div key={`${nucleotideChange} + ${i}`}>{nucleotideChange}</div>
       ))}
     </td>
     <td>{props.variant.proteinChange}</td>
